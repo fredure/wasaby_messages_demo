@@ -1,0 +1,28 @@
+<Controls.Application>
+    <div class="app">
+        <div class="container">
+            <ws:for data="_message in _messages">
+                <div class="item">
+                    <div class="photo">
+                        <img src="{{_message.person.photo}}"/>
+                    </div>
+                    <div class="message">
+                        <div class="info">
+                            <a href="#" class="name">
+                                {{_message.person.name}}
+                            </a>
+                            <div
+                                class="date"
+                                title="Отправлено 03 ноя 2020 16:49, прочитано 03 ноя 2020 16:49"
+                            >
+                                24 май 21:43
+                            </div>
+                        </div>
+                        <div class="text">{{_message.text}}</div>
+                    </div>
+                </div>
+            </ws:for>
+            <div class="intersectionObserver"></div>
+        </div>
+    </div>
+</Controls.Application>

@@ -1,0 +1,113 @@
+html,
+body,
+#root,
+.app,
+#scrollArea {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+}
+
+.intersectionObserver {
+	position: relative;
+	bottom: 200px;
+}
+
+.container {
+	width: 700px;
+	height: 100%;
+	margin: auto;
+	overflow-y: scroll;
+}
+
+.item {
+	display: flex;
+	padding: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.item:hover {
+	background-color: #f9f9f9;
+}
+
+.item::after {
+	content: ',,';
+	color: #587ab0;
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+	font-family: serif;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.item:hover::after {
+	display: block;
+}
+
+.item::after:hover {
+	color: #313e78;
+}
+
+.photo {
+	margin-right: 10px;
+	position: relative;
+	height: min-content;
+}
+
+.photo img {
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.photo::before {
+	position: absolute;
+	display: block;
+	content: '';
+	bottom: 0;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background-color: grey;
+	border: 2px solid white;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.name {
+	color: #313e78;
+	font-size: 14px;
+}
+
+.name:hover {
+	color: #313e78;
+}
+
+.date {
+	color: #999999;
+	font-size: 12px;
+}
+
+.text {
+	font-size: 14px;
+}
